@@ -1,5 +1,7 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+
+import './PostContainer.css'
 // import PropTypes from 'prop-types';
 
 class PostContainer extends React.Component {
@@ -16,21 +18,22 @@ class PostContainer extends React.Component {
                     this.props.dummyData.map(data => {
 
                         return (
-                            <div>
-                                <div>
-                                    <img src={data.thumbnailUrl} />
-                                    <p>{data.username}</p>
+                            <div className='post-container'>
+                                <div className='post-container-top-section'>
+                                    <img className='thumbnail-image' src={data.thumbnailUrl} />
+                                    <p className='username'>{data.username}</p>
                                 </div>
 
                                 <div>
                                     <img src={data.imageUrl} />
                                 </div>
-                                <div>
+
+                                <div className='like-section'>
                                     <div>
                                         <i class="far fa-heart"></i>
                                         <i class="far fa-comment"></i>
                                     </div>
-                                    <p>{data.likes} likes</p>
+                                    <div className='likes'>{data.likes} likes</div>
                                 </div>
 
                                 <CommentSection comments={data.comments} />
