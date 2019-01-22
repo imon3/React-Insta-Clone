@@ -30,8 +30,8 @@ class PostContainer extends React.Component {
 
                                 <div className='like-section'>
                                     <div>
-                                        <i class="far fa-heart"></i>
-                                        <i class="far fa-comment"></i>
+                                        <i className="far fa-heart"></i>
+                                        <i className="far fa-comment"></i>
                                     </div>
                                     <div className='likes'>{data.likes} likes</div>
                                 </div>
