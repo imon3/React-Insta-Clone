@@ -2,12 +2,12 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 
 import './PostContainer.css'
+import LikeSection from './LikeSection';
 // import PropTypes from 'prop-types';
 
 class PostContainer extends React.Component {
     constructor(props) {
         super(props)
-
     }
 
     render() {
@@ -28,22 +28,19 @@ class PostContainer extends React.Component {
                                     <img src={data.imageUrl} />
                                 </div>
 
-                                <div className='like-section'>
-                                    <div>
-                                        <i className="far fa-heart"></i>
-                                        <i className="far fa-comment"></i>
-                                    </div>
-                                    <div className='likes'>{data.likes} likes</div>
-                                </div>
+                                <LikeSection likes={data.likes} />
 
                                 <CommentSection comments={data.comments} />
                             </div>
                         )
+                        console.log(this.data.likes)
                     })
                 }
             </div>
 
         )
+
+
     }
 }
 
