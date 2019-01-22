@@ -22,11 +22,8 @@ class CommentSection extends React.Component {
                     )
                 })}
                 <form className='form-section'>
-
                     <input type='text' placeholder='Add a comment...' />
                     <i className="fas fa-ellipsis-h"></i>
-
-
                 </form>
             </div>
         )
