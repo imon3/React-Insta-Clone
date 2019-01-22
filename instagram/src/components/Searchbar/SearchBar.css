@@ -4,6 +4,7 @@
     align-items: center;
     font-size: 1.7rem;
     border-bottom: solid gray 1px;
+    margin-bottom: 20px;
 }
 
 .search-bar-wrapper i {

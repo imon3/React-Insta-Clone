@@ -3,6 +3,10 @@ import React from 'react';
 import './SearchBar.css'
 
 class SearchBar extends React.Component {
+    constructor(props) {
+        super(props)
+        console.log(props)
+    }
 
     render() {
         return (
@@ -14,7 +18,7 @@ class SearchBar extends React.Component {
 
                 <div>
                     <form>
-                        <input type='text' placeholder='Search' />
+                        <input onChange={this.props.searchHandler} type='text' placeholder='Search' />
                     </form>
                 </div>
 

@@ -19,6 +19,7 @@ class PostContainer extends React.Component {
 
                         return (
                             <div className='post-container'>
+
                                 <div className='post-container-top-section'>
                                     <img className='thumbnail-image' src={data.thumbnailUrl} />
                                     <p className='username'>{data.username}</p>
@@ -33,7 +34,6 @@ class PostContainer extends React.Component {
                                 <CommentSection comments={data.comments} />
                             </div>
                         )
-                        console.log(this.data.likes)
                     })
                 }
             </div>
