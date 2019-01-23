@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Comments from './Comments'
 
@@ -54,6 +55,13 @@ class CommentSection extends React.Component {
             </div>
         )
     }
+}
+
+CommentSection.propTypes = {
+    comments: PropTypes.array,
+    handleComment: PropTypes.func,
+    addNewComment: PropTypes.func,
+    comment: PropTypes.string
 }
 
 export default CommentSection;

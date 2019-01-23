@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './Login.css';
 
@@ -40,6 +41,13 @@ class Login extends React.Component {
             </div>
         )
     }
+}
+
+Login.propTypes = {
+    value: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ])
 }
 
 export default Login;

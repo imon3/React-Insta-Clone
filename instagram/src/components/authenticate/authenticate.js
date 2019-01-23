@@ -28,11 +28,11 @@ const authenticate = (Component1) => (Component2) =>
         }
 
         render() {
-            console.log(localStorage)
+
             if (!this.state.userLoggedIn) {
                 return <Component1 />
             } else {
-                return <Component2 removeLocalStorage={this.removeLocalStorage()} />
+                return <Component2 />
             }
         }
     }
