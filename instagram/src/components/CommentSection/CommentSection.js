@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Comments from './Comments'
 
+
 import './CommentSection.css'
 
 class CommentSection extends React.Component {
@@ -31,10 +32,11 @@ class CommentSection extends React.Component {
 
     addNewComment = (e) => {
         e.preventDefault();
+        const localStorageUserName = localStorage.getItem('user')
         this.setState({
             comments: [...this.state.comments,
             {
-                username: 'Unregistered User',
+                username: localStorageUserName,
                 text: this.state.comment
             }
             ],

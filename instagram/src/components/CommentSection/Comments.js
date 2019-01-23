@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './CommentSection.css'
 
 class Comments extends React.Component {
@@ -30,6 +31,14 @@ class Comments extends React.Component {
             </div>
         )
     }
+}
+
+Comments.propTypes = {
+    comments: PropTypes.array,
+    username: PropTypes.shape(
+        PropTypes.string,
+        PropTypes.number
+    )
 }
 
 export default Comments;

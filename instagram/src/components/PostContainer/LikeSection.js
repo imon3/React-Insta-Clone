@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class LikeSection extends React.Component {
     constructor(props) {
@@ -24,6 +25,11 @@ class LikeSection extends React.Component {
             </div>
         )
     }
+}
+
+LikeSection.propTypes = {
+    likes: PropTypes.number,
+    incrementLikes: PropTypes.func
 }
 
 export default LikeSection;

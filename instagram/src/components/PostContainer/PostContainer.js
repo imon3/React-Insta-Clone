@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 
 import './PostContainer.css'
 import LikeSection from './LikeSection';
-// import PropTypes from 'prop-types';
+
 
 class PostContainer extends React.Component {
     constructor(props) {
@@ -42,6 +43,20 @@ class PostContainer extends React.Component {
 
 
     }
+}
+
+PostContainer.propTypes = {
+    data: PropTypes.array,
+    thumbnailUrl: PropTypes.string,
+    username: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    comments: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    imageUrl: PropTypes.string
 }
 
 export default PostContainer;
