@@ -6,16 +6,7 @@ import Login from './components/Login/Login';
 
 import authenticate from './components/authenticate/authenticate'
 
+const Authenticate = authenticate(Login)(PostsPage);
 
 
-class App extends Component {
-
-  render() {
-    return (
-      // <PostsPage />
-      <Login />
-    )
-  }
-}
-
-export default authenticate(App);;
+export default Authenticate;
