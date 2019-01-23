@@ -13,7 +13,7 @@ class Comments extends React.Component {
             <div className='comments'>
                 {this.props.comments.map((comment, index) => {
                     return (
-                        <div >
+                        <div key={index}>
                             <div>
                                 <span key={index} className='user-comment'>{comment.username}</span> <span>{comment.text}</span>
                             </div>
@@ -25,7 +25,7 @@ class Comments extends React.Component {
                     onSubmit={this.props.addNewComment}
                 >
                     <input type='text' placeholder='Add a comment...' name='comment' value={this.props.comment} onChange={this.props.handleComment} />
-                    <i className="fas fa-ellipsis-h"></i>
+                    <i onClick={this.props.addNewComment} className="fas fa-ellipsis-h"></i>
                 </form>
             </div>
         )

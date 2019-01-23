@@ -15,10 +15,10 @@ class PostContainer extends React.Component {
         return (
             <div>
                 {
-                    this.props.dummyData.map(data => {
+                    this.props.dummyData.map((data, index) => {
 
                         return (
-                            <div className='post-container'>
+                            <div key={index} className='post-container'>
 
                                 <div className='post-container-top-section'>
                                     <img className='thumbnail-image' src={data.thumbnailUrl} />
