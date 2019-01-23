@@ -9,11 +9,16 @@ class SearchBar extends React.Component {
 
     }
 
+    removeLocalStorage = () => {
+        localStorage.removeItem('user');
+        window.location.reload();
+    }
+
     render() {
         return (
             <div className='search-bar-wrapper'>
                 <div className='search-bar-left'>
-                    <p><i className="fab fa-instagram"></i></p>
+                    <p><i onClick={this.removeLocalStorage} className="fab fa-instagram"></i></p>
                     <p className='instagram'>Instagram</p>
                 </div>
 

@@ -22,11 +22,6 @@ const authenticate = (Component1) => (Component2) =>
             }
         }
 
-        removeLocalStorage = () => {
-            localStorage.removeItem('user')
-
-        }
-
         render() {
 
             if (!this.state.userLoggedIn) {
