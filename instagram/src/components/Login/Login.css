@@ -1,4 +1,4 @@
-.login {
+/* .login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,23 +7,35 @@
     margin: 0 auto;
     height: 100vh;
     font-size: 5rem;
-}
+} */
 
-.login form {
+/* .login-div {
+    box-shadow: 0px 0px 40px 5px blue;
+} */
+
+/* .login form {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-}
+} */
 
-.login form input {
+/* .login form input {
     padding: 10px 100px;
     margin: 10px;
     text-align: center;
     font-size: 1.5rem;
-}
+} */
 
-.login form button {
+/* .login form button {
     width: 50%;
     padding: 10px;
-}
+} */
+
+/* .login form button:hover {
+    font-size: 2rem;
+    font-weight: bold;
+    color: grey;
+    background-color: blue;
+    transition: ease-in-out .5s;
+} */

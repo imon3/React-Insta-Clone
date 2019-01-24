@@ -11,7 +11,7 @@ const authenticate = (Component1) => (Component2) =>
         }
 
         componentDidMount() {
-            if (localStorage.length > 0) {
+            if (localStorage.getItem('user')) {
                 this.setState({
                     userLoggedIn: true
                 })
