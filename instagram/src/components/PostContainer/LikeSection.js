@@ -1,5 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const LikeSectionDiv = styled.div`
+display: flex;
+flex-direction: column;
+align-items: start;
+`;
+
+const LikeSectionI = styled.i`
+font-size: 1.5rem;
+margin: 10px 10px 5px 10px;
+`;
+
+const Likes = styled.div`
+font-weight: bold;
+margin-left: 10px;
+`;
 
 class LikeSection extends React.Component {
     constructor(props) {
@@ -16,13 +33,13 @@ class LikeSection extends React.Component {
 
     render() {
         return (
-            <div className='like-section'>
+            <LikeSectionDiv className='like-section'>
                 <div>
-                    <i onClick={this.incrementLikes} className="far fa-heart"></i>
-                    <i className="far fa-comment"></i>
+                    <LikeSectionI onClick={this.incrementLikes} className="far fa-heart"></LikeSectionI>
+                    <LikeSectionI className="far fa-comment"></LikeSectionI>
                 </div>
-                <div className='likes'>{this.state.likes} likes</div>
-            </div>
+                <Likes className='likes'>{this.state.likes} likes</Likes>
+            </LikeSectionDiv>
         )
     }
 }

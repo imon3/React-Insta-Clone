@@ -1,9 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
-
-import './PostContainer.css'
 import LikeSection from './LikeSection';
+import styled from 'styled-components';
+// import './PostContainer.css'
+
+const PostContainerDiv = styled.div`
+width: 640px;
+margin: 0 auto;
+border: solid grey 1px;
+margin-bottom: 30px;
+`;
+
+const PostContainerTopSection = styled.div`
+display: flex;
+margin: 20px 0 20px 10px;
+`;
+
+const ThumbnailImage = styled.img`
+height: 50px;
+width: 50px;
+margin-right: 10px;
+border-radius: 50%;
+`;
+
+const TopSectionUsername = styled.p`
+font-weight: bold;
+`;
 
 
 class PostContainer extends React.Component {
@@ -19,12 +42,12 @@ class PostContainer extends React.Component {
                     this.props.dummyData.map((data, index) => {
 
                         return (
-                            <div key={index} className='post-container'>
+                            <PostContainerDiv key={index}>
 
-                                <div className='post-container-top-section'>
-                                    <img className='thumbnail-image' src={data.thumbnailUrl} />
-                                    <p className='username'>{data.username}</p>
-                                </div>
+                                <PostContainerTopSection>
+                                    <ThumbnailImage className='thumbnail-image' src={data.thumbnailUrl} />
+                                    <TopSectionUsername className='username'>{data.username}</TopSectionUsername>
+                                </PostContainerTopSection>
 
                                 <div>
                                     <img src={data.imageUrl} />
@@ -33,7 +56,7 @@ class PostContainer extends React.Component {
                                 <LikeSection likes={data.likes} />
 
                                 <CommentSection comments={data.comments} />
-                            </div>
+                            </PostContainerDiv>
                         )
                     })
                 }
