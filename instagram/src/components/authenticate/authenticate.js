@@ -1,4 +1,5 @@
 import React from 'react';
+// import { Route } from 'react-router-dom';
 
 const authenticate = (Component1) => (Component2) =>
     class extends React.Component {

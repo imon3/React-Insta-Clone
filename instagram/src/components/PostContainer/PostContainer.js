@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import LikeSection from './LikeSection';
 import styled from 'styled-components';
-// import './PostContainer.css'
+
 
 const PostContainerDiv = styled.div`
 width: 640px;

@@ -9,7 +9,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 font-size: 1.7rem;
-border-bottom: solid gray 1px;
+// border-bottom: solid gray 1px;
 margin-bottom: 20px;
 `;
 
@@ -21,7 +21,7 @@ const SearchBarRight = styled.div`
 display: flex;
 `;
 
-const SearchBarWrapperI = styled.p`
+const SearchBarWrapperI = styled.i`
 padding: 0 10px;
 `;
 
