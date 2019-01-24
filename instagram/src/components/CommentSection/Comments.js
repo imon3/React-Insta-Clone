@@ -1,6 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './CommentSection.css'
+import styled from 'styled-components';
+
+const CommentSectionDiv = styled.div`
+display: flex;
+flex-direction: column;
+align-items: start;
+margin-left: 10px;
+margin-top: 10px;
+`;
+
+const UserComment = styled.span`
+font-weight: bold;
+`;
+
+const FormSection = styled.form`
+display: flex;
+justify-content: space-between;
+width: 100%;
+margin: 20px 0 10px 0;
+`;
+
+const FormSectionInput = styled.input`
+width: 50%;
+padding: 5px;
+border: none;
+`;
+
+const FaEllipsisH = styled.i`
+margin-right: 10px;
+`;
 
 class Comments extends React.Component {
     constructor(props) {
@@ -11,24 +40,23 @@ class Comments extends React.Component {
     render() {
 
         return (
-            <div className='comments'>
+            <CommentSectionDiv>
                 {this.props.comments.map((comment, index) => {
                     return (
                         <div key={index}>
                             <div>
-                                <span key={index} className='user-comment'>{comment.username}</span> <span>{comment.text}</span>
+                                <UserComment key={index}>{comment.username}</UserComment> <span>{comment.text}</span>
                             </div>
                         </div>
                     )
                 })}
-                <form
-                    className='form-section'
+                <FormSection
                     onSubmit={this.props.addNewComment}
                 >
-                    <input type='text' placeholder='Add a comment...' name='comment' value={this.props.comment} onChange={this.props.handleComment} />
-                    <i onClick={this.props.addNewComment} className="fas fa-ellipsis-h"></i>
-                </form>
-            </div>
+                    <FormSectionInput type='text' placeholder='Add a comment...' name='comment' value={this.props.comment} onChange={this.props.handleComment} />
+                    <FaEllipsisH onClick={this.props.addNewComment} className="fas fa-ellipsis-h"></FaEllipsisH>
+                </FormSection>
+            </CommentSectionDiv>
         )
     }
 }
