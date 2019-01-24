@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import './Login.css';
+// import './Login.css';
 
 const LoginDiv = styled.div`
 display: flex;

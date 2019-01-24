@@ -2,7 +2,42 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import './SearchBar.css'
+// import './SearchBar.css'
+
+const SearchBarWrapper = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 1.7rem;
+border-bottom: solid gray 1px;
+margin-bottom: 20px;
+`;
+
+const SearchBarLeft = styled.div`
+display: flex;
+`;
+
+const SearchBarRight = styled.div`
+display: flex;
+`;
+
+const SearchBarWrapperI = styled.p`
+padding: 0 10px;
+`;
+
+const Instagram = styled.p`
+font-family: 'Kaushan Script', cursive;
+`;
+
+const InstagramIcon = styled.i`
+border-right: black solid 1px;
+padding: 0 10px;
+`;
+
+const SearchBarWrapperInput = styled.input`
+width: 300px;
+text-align: center;
+`;
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -17,24 +52,24 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div className='search-bar-wrapper'>
-                <div className='search-bar-left'>
-                    <p><i onClick={this.removeLocalStorage} className="fab fa-instagram"></i></p>
-                    <p className='instagram'>Instagram</p>
-                </div>
+            <SearchBarWrapper>
+                <SearchBarLeft>
+                    <SearchBarWrapperI><InstagramIcon onClick={this.removeLocalStorage} className="fab fa-instagram"></InstagramIcon></SearchBarWrapperI>
+                    <Instagram className='instagram'>Instagram</Instagram>
+                </SearchBarLeft>
 
                 <div>
                     <form>
-                        <input onChange={this.props.searchHandler} type='text' placeholder='Search' />
+                        <SearchBarWrapperInput onChange={this.props.searchHandler} type='text' placeholder='Search' />
                     </form>
                 </div>
 
-                <div className='search-bar-right'>
-                    <p><i className="far fa-compass"></i></p>
-                    <p><i className="far fa-heart"></i></p>
-                    <p><i className="far fa-user"></i></p>
-                </div>
-            </div>
+                <SearchBarRight>
+                    <p><SearchBarWrapperI className="far fa-compass"></SearchBarWrapperI></p>
+                    <p><SearchBarWrapperI className="far fa-heart"></SearchBarWrapperI></p>
+                    <p><SearchBarWrapperI className="far fa-user"></SearchBarWrapperI></p>
+                </SearchBarRight>
+            </SearchBarWrapper>
         )
     }
 }
