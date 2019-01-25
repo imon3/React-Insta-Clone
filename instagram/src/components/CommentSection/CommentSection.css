@@ -1,0 +1,33 @@
+/* .comments-section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 10px;
+    margin-top: 10px;
+} */
+
+.comments {
+    text-align: start;
+    width: 100%;
+}
+
+/* .user-comment {
+    font-weight: bold;
+} */
+
+/* .form-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0 10px 0;
+} */
+
+/* .form-section input {
+    width: 50%;
+    padding: 5px;
+    border: none;
+} */
+
+/* .fa-ellipsis-h {
+    margin-right: 10px;
+} */
